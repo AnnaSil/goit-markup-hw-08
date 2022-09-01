@@ -1,0 +1,108 @@
+.portfolio-buttons-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 8px;
+    @include tablet {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    @include desktop {
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}
+.app {
+    margin-bottom: 0;
+    @include mobile {
+        margin-bottom: 7px;
+    }
+    @include tablet {
+        margin-bottom: 0px;
+    }
+}
+
+.portfolio-button {
+    font-family: inherit;
+    @include font(500, 16, 1.62, 0.03em);
+    text-align: center;
+    color: var(--title-color);
+    background-color: var(--second-background-color);
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    padding: 6px 22px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio-list-item {
+    width: 100%;
+    @include tablet {
+        width: calc((100% - 30px) / 2);
+    }
+    @include desktop {
+        width: calc((100% - 60px) / 3);
+    }
+}
+
+.portfolio-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.portfolio-item-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-container {
+    padding: 20px 24px;
+    border-bottom: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    flex-grow: 1;
+}
+
+.portfolio-list-header {
+    @include font(700, 18, 2, 0.06em);
+    color: var(--title-color);
+    margin-bottom: 4px;
+}
+
+.portfolio-list-text {
+    @include font(null, 16, 1.88, 0.03em);
+    color: var(--text-color);
+}
+
+.porfolio-hover-text {
+    position: absolute;
+    @include font(400, 18, 1.55, 0.03em);
+    color: var(--white-color);
+    background-color: rgba(33, 150, 243, 0.9);;
+    top: 0;
+    height: 100%;
+    padding: 63px 24px;
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .portfolio-link:hover & {
+        transform: translateY(0%);
+    }
+}
