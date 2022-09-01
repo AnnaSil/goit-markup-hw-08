@@ -7,8 +7,7 @@
 .benefits__item {
     width: 450px;
     @include tablet {
-        width: 354px;
-        // width: calc((100%-30px)/2);
+        width: 342px;
     }
     @include desktop {
         width: 270px;
@@ -16,7 +15,6 @@
 }
 
 .benefits__svg-container {
-    width: 290px;
     height: 120px;
     display: flex;
     justify-content: center;
@@ -24,16 +22,6 @@
     background-color: var(--second-background-color);
     margin-bottom: 30px;
     border-radius: 4px;
-    @include mobile {
-        width: 450px;
-    }
-    @include tablet {
-        width: 354px;
-    }
-    @include desktop {
-        width: 270px;
-    }
-    
 }
 
 .benefits__title {
