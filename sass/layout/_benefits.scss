@@ -27,8 +27,12 @@
 .benefits__title {
     @include font(700, 14, 1.14, 0.03em);
     text-transform: uppercase;
+    text-align: center;
     color: var(--title-color);
     margin-bottom: 10px;
+    @include tablet {
+        text-align: left;
+    }
 }
 
 .benefits__text {
